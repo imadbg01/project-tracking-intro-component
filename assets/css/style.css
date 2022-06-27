@@ -31,6 +31,9 @@ img {
   display: flex;
   gap: var(--gap, 1rem);
 }
+.d-block {
+  display: block;
+}
 
 .flow > *:where(:not(:last-child)) {
   margin-top: var(--gap, 1rem);
@@ -223,4 +226,43 @@ button[type="button"]:last-child {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.attribution {
+  position: fixed;
+  left: 2rem;
+  bottom: 2rem;
+  background-image: url(../images/logo.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.attribution p {
+  position: fixed;
+  bottom: 4.5rem;
+  left: 4.5rem;
+  background-color: var(--primary-red);
+  width: 25%;
+  color: var(--LightGrayishBlue);
+  padding: 0.5em 0.7em;
+  border-radius: 1rem;
+  transform: rotateX(90deg);
+  visibility: hidden;
+  transition: all 450ms ease-in;
+}
+
+.attribution a {
+  color: var(--VeryDarkBlue);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.attribution:hover p {
+  transform: rotate(0deg);
+  visibility: visible;
 }
